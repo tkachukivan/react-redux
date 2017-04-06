@@ -1,0 +1,30 @@
+{
+  "parser": "babel-eslint",
+  "extends": "airbnb",
+  "ecmaFeatures": {
+    "modules": true,
+    "es6": true,
+    "jsx": true,
+    "browser": true
+  },
+  "rules": {
+    "comma-dangle": "off",
+    "no-new": "off",
+    "operator-assignment": "off",
+    "no-param-reassign": "off",
+    "no-plusplus": "off",
+    "consistent-return": "off",
+    "linebreak-style": "off",
+    "max-len": "off",
+    "react/no-array-index-key": 0,
+    "": off
+  },
+  "settings": {
+    "import/ignore": ["node_modules"]
+  },
+  "globals": {
+    "document": true,
+    "fetch": true,
+    "window": true
+  }
+}
