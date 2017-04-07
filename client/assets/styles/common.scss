@@ -1,3 +1,31 @@
+body {
+	margin: 0;
+	padding: 0;
+}
+
 *, :before, :after {
 	box-sizing: border-box;
+	font-family: Georgia;
+}
+
+.button {
+	width: 100px;
+	height: 30px;
+	background: #09b9b2;
+	text-transform: uppercase;
+	color: white;
+	border: none;
+	outline: none;
+
+	&:hover {
+		background: darken(#09b9b2, 20%);
+	}
+
+	&_remove {
+		background: #b94162;
+
+		&:hover {
+			background: darken(#b94162, 20%);
+		}
+	}
 }

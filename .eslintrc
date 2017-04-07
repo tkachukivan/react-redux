@@ -17,7 +17,9 @@
     "linebreak-style": "off",
     "max-len": "off",
     "react/no-array-index-key": 0,
-    "": off
+    "": "off",
+    "react/forbid-prop-types": "off",
+    "no-shadow": "off"
   },
   "settings": {
     "import/ignore": ["node_modules"]

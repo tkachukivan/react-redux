@@ -1,21 +1,22 @@
 .header {
-  margin: 10px 0 0;
-  padding: 10px 0;
-  border-bottom: 1px solid #eee;
-}
+  &-nav {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
 
-.link {
-  font-size: 1.8em;
-  color: #3572b0;
-  display: inline-block;
-  margin: 0 10px 0 0;
-  text-decoration: none;
+    &__item {
+      display: block;
+      padding: 15px 20px;
+      color: #42b983;
+      text-transform: capitalize;
+      text-decoration: none;
+      border: 1px solid transparent;
 
-  &_active {
-    text-decoration: underline;
-  }
-
-  &:hover {
-    color: #ccc;
+      &:hover {
+        border: 1px solid #42b983;
+        border-radius: 10px;
+      }
+    }
   }
 }

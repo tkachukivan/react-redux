@@ -1,0 +1,11 @@
+.books-list {
+  margin: 0;
+  padding: 10px 0;
+  list-style: none;
+
+  &-wrapper {
+    width: 80%;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+}

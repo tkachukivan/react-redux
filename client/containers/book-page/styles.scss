@@ -1,0 +1,19 @@
+.book-page {
+  width: 80%;
+  max-width: 800px;
+  margin: 0 auto;
+
+  &-info-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  span {
+    font-weight: bold;
+  }
+
+  &__name {
+    text-align: center;
+  }
+}

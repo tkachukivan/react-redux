@@ -1,8 +1,14 @@
 import { routerReducer as routing } from 'react-router-redux';
 import { combineReducers } from 'redux';
-import features from './features.reducer';
+import books from './books.reducer';
+import addedBooks from './added-books.reducer';
+import loader from './loading.reducer';
+import pricesSum from './prices-sum.reducer';
 
 export default combineReducers({
   routing,
-  features,
+  books,
+  addedBooks,
+  loader,
+  pricesSum
 });

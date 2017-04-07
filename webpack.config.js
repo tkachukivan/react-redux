@@ -1,7 +1,7 @@
-var path = require('path');
-var webpack = require('webpack');
-var HtmlWebpackPlugin = require('html-webpack-plugin');
-var ExtractTextPlugin = require('extract-text-webpack-plugin');
+const path = require('path');
+const webpack = require('webpack');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 module.exports = {
   entry: ['whatwg-fetch', './client/app.jsx'],
@@ -20,8 +20,7 @@ module.exports = {
           fallback: 'style-loader'
         }),
       },
-      { test: /\.(png|jpg|gif|svg)$/, loader: 'file-loader',  options: { name: '[name].[ext]?[hash]' } },
-      
+      { test: /\.(png|jpg|gif|svg)$/, loader: 'file-loader', options: { name: '[name].[ext]?[hash]' } },
     ]
   },
 
@@ -43,7 +42,7 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: 'client/index.html',
     }),
-    new ExtractTextPlugin("style.css")
+    new ExtractTextPlugin('style.css')
   ],
 
   performance: {
@@ -71,5 +70,5 @@ if (process.env.NODE_ENV === 'production') {
     new webpack.LoaderOptionsPlugin({
       minimize: true
     })
-  ])
+  ]);
 }
