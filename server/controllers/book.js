@@ -23,15 +23,26 @@ const updateBook = (req, res) => {
 };
 
 const getBook = (req, res) => {
-  console.log(`get book by id ${req.params.id}`);
+  const id = req.params.id;
+  console.log(`get book by id ${id}`);
 
-  let addedBooks;
+  let addedBooks = 0;
   Book.find()
     .then((books) => {
-      addedBooks = books.filter(book => book.added === true).length;
-      return Book.findOne({ _id: req.params.id });
-    })
-    .then((bookById) => {
+      let bookById;
+      books.forEach((book) => {
+        if (book.id === id) {
+          bookById = book;
+        }
+        if (book.added) {
+          addedBooks++;
+        }
+      });
+
+      if (!bookById) {
+        throw Error(`can\`t find book with id ${id}`);
+      }
+
       res.send({
         bookById,
         addedBooks

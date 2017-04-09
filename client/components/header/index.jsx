@@ -16,7 +16,7 @@ const Header = ({ addedBooks }) => (
         to="/books"
         className="header-nav__item"
       >
-        my books ({addedBooks})
+        my books ({ addedBooks })
       </Link>
     </nav>
   </div>

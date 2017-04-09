@@ -1,15 +1,17 @@
 @import "assets/styles/common";
 
-@import "containers/root/styles";
-
 @import "containers/home/styles";
 
 @import "containers/books-list/styles";
 
 @import "containers/book-page/styles";
 
+@import "components/buy/styles";
+
 @import "containers/not-found/styles";
 
 @import "components/header/styles";
 
 @import "components/book-list-item/styles";
+
+@import "components/loader/styles";

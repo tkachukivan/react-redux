@@ -4,13 +4,12 @@ import logger from 'redux-logger';
 
 import reducers from '../reducers';
 
-
 const middlewares = [
   thunk,
 ];
 
 if (process.env.NODE_ENV === 'development') {
-  middlewares.push(logger({}));
+  middlewares.push(logger());
 }
 
 const create = compose(

@@ -9,7 +9,7 @@ const BookItem = ({ book }) => (
     <div className="book__info">
       <span className="book__name">
         &quot;{book.name}&quot;
-      </span> by
+      </span>{' by '}
       <span className="book__author">
         {book.author}
       </span>

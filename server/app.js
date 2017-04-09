@@ -30,4 +30,8 @@ app.put('/api/book/:id', updateBook);
 app.get('/api/book/:id', getBook);
 app.post('/api/buy', buy);
 
+app.get('/*', (req, res) => {
+  res.sendFile(path.join(__dirname, './../dist/index.html'));
+});
+
 exports.app = app;

@@ -1,15 +1,10 @@
-export const loadBooks = books => ({
-  type: 'LOAD_BOOKS',
-  books
+export const toggleLoader = () => ({
+  type: 'TOGGLE_LOADER',
 });
 
 export const toggleBook = id => ({
   type: 'TOGGLE_BOOK',
   id
-});
-
-export const toggleLoader = () => ({
-  type: 'TOGGLE_LOADER',
 });
 
 export const addToAddedBook = () => ({
@@ -50,4 +45,15 @@ export const decreasePricesSum = price => ({
 
 export const buyBooks = () => ({
   type: 'BUY_BOOKS',
+});
+
+export const loadBookById = (id, book) => ({
+  type: 'LOAD_BOOK',
+  id,
+  book
+});
+
+export const loadBooks = books => ({
+  type: 'LOAD_BOOKS',
+  books
 });

@@ -19,7 +19,10 @@
     "react/no-array-index-key": 0,
     "": "off",
     "react/forbid-prop-types": "off",
-    "no-shadow": "off"
+    "no-shadow": "off",
+    "array-callback-return": "off",
+    "react/require-default-props": "off",
+    "camelcase": "off"
   },
   "settings": {
     "import/ignore": ["node_modules"]

@@ -1,26 +1,3 @@
-const inSt = [
-  {
-    id: '58e3f73ff36d281a995cf106',
-    name: 'The Lightning Thief',
-    author: 'Rick Riordan',
-    series: 'Percy Jackson and the Olympians',
-    genre: 'fantasy',
-    inStock: true,
-    price: 12.5,
-    added: false
-  },
-  {
-    id: '59e3f73ff36d281a995cf106',
-    name: 'The Lightning Thief',
-    author: 'Rick Riordan',
-    series: 'Percy Jackson and the Olympians',
-    genre: 'fantasy',
-    inStock: true,
-    price: 12.5,
-    added: false
-  }
-];
-
 const book = (state, action) => {
   switch (action.type) {
     case 'TOGGLE_BOOK':
@@ -41,7 +18,7 @@ const book = (state, action) => {
   }
 };
 
-const books = (state = inSt, action) => {
+const books = (state = [], action) => {
   switch (action.type) {
     case 'LOAD_BOOKS':
       return action.books;
@@ -55,3 +32,10 @@ const books = (state = inSt, action) => {
 };
 
 export default books;
+
+export const getBooks = (books, location) => {
+  if (location && /\/books/.test(location.pathname)) {
+    return books.filter(book => book.added === true);
+  }
+  return books;
+};
